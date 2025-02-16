@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love you </title>
+    <style>
+    p{
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+body {
+    height: 100vh;  
+    margin: 0;
+}
+        #heart { 
+            display: none;
+    position: relative; 
+    width: 300px; 
+    height: 290px; 
+    margin: auto;
+    margin-bottom: 50px;
+} 
+
+#heart:before{
+    position: absolute; 
+    content: ""; 
+    top: 100px;
+    width: 150px; 
+    height: 230px; 
+    background: red; 
+    border-radius: 100px 100px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+
+
+ #heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 50px; 
+    top: 100px; 
+    width: 150px; 
+    height: 230px; 
+    background: red; 
+    border-radius: 100px 100px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+
+#heart:after { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
+
+.yes {
+            border-radius: 10px;
+            background-color: #00ff00;
+            width: 180px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            margin: 10px;
+        }
+
+        .no {
+            border-radius: 10px;
+            background-color: red;
+            width: 180px;
+            height: 40px;
+            font-size: 20px;
+            cursor:not-allowed;
+            border: none;
+            color: white;
+            margin: 10px;
+            transition: all 0.5s ease;
+        }
+
+        .heart {
+            display: none;
+        }
+
+.show{
+    display: block;
+}
+    </style>
+</head>
+<body style="background-color: #ff9dff; text-align: center;">
+    <div id="heart">
+        
+    </div>
+    <p class="heart">я знал:)</p>
+    <p class="show">I LOVE YOU !</p>
+    <p class="shows">А ТЫ?</p>
+    <button class="yes">ДААААААААААА</button>
+    <button class="no" disabled>НЕТ!</button>
+</body>
+<script>
+    const yesb = document.querySelector('.yes');
+    const nob = document.querySelector('.no');
+    const show = document.querySelector('.show');
+    const shows = document.querySelector('.shows');
+    const heartb = document.getElementById('heart');
+    const heart = document.querySelector('.heart');
+    yesb.addEventListener('click', () => {
+        heartb.style.display = 'block';
+        heart.style.display = 'block';
+        show.style.display = 'none';
+        shows.style.display = 'none';
+    })
+    nob.addEventListener('click', () => {
+        heartb.style.display = 'none';
+        heart.style.display = 'none';
+    })
+
+</script>
+</html>
